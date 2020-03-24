@@ -1,5 +1,4 @@
 import { qs, $on, $delegate } from "./helpers.js";
-import Template from "./template.js";
 
 const _itemId = element =>
   parseInt(
@@ -15,8 +14,8 @@ export default class View {
   constructor(template) {
     this.template = template;
     this.$todoList = qs(".todo-list");
-    this.$todoIteemCounter = qs(".todo-count");
-    this.$clearComplete = qs(".clear-complete");
+    this.$todoItemCounter = qs(".todo-count");
+    this.$clearCompleted = qs(".clear-completed");
     this.$main = qs(".main");
     this.$toggleAll = qs(".toggle-all");
     this.$newTodo = qs(".new-todo");

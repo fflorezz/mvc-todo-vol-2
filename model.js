@@ -105,7 +105,9 @@ export default class Model {
   // @param { function(number, number, number) } callback Called when the count is completed
 
   count(callback) {
-    const total = this.getLocalStorage().length;
+    const data = this.getLocalStorage();
+    const total = data.length;
+    let i = total;
     let completed = 0;
 
     while (i--) {
